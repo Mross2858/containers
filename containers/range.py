@@ -45,6 +45,6 @@ def range(a, b=None, c=None):
         stop = b
     if (step > 0 and start >= stop) or (step < 0 and start <= stop):
         return
-    while(step > 0 and start < stop) or (step < 0 and start > stop):
+    while (step > 0 and start < stop) or (step < 0 and start > stop):
         yield start
         start += step
