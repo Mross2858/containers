@@ -1,6 +1,6 @@
 def range(a, b=None, c=None):
     '''
-    This function should behave exactly like the built-in range function.
+    This  function should behave exactly like the built-in range function.
     For example:
 
     >>> list(range(5))
