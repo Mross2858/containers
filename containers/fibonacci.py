@@ -1,8 +1,8 @@
 
-################################################################################
+############################################################################
 # example fibonacci number code;
 # you do not have to modify this code in any way
-################################################################################
+############################################################################
 
 
 def fibs(n):
@@ -46,10 +46,10 @@ def fib(n):
     return f2
 
 
-################################################################################
+############################################################################
 # fibonacci number code using generators;
 # you will need to implement the functions below
-################################################################################
+############################################################################
 
 
 class Fib:
@@ -61,6 +61,7 @@ class Fib:
     [1, 1, 2, 3, 5]
     '''
     n = 0
+
     def __init__(self, n=None):
         self.n = n
 
@@ -70,9 +71,10 @@ class Fib:
         else:
             rep = "Fib()"
         return rep
-    
+
     def __iter__(self):
         return FibIter(self.n)
+
 
 class FibIter:
     '''
@@ -98,9 +100,11 @@ class FibIter:
                 self.current, self.next = self.next, self.current + self.next
                 return selfcurrent
 
+
 def fib_yield(n=None):
     '''
-    This function returns a generator that computes the first n fibonacci numbers.
+    This function returns a generator that computes the first n fibonacci
+    numbers.
     If n is None, then the generator is infinite.
     '''
     current, next = 1, 1
