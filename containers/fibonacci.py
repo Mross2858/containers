@@ -7,7 +7,7 @@
 
 def fibs(n):
     '''
-    This  function computes the first n fibonacci numbers.
+    This function computes the first n fibonacci numbers.
     Notice that this function uses O(n) memory.
     '''
     fibs = []
