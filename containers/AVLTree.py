@@ -8,7 +8,7 @@ from containers.BinaryTree import BinaryTree, Node
 from containers.BST import BST
 
 
-class AVLTree():
+class AVLTree(BST):
     '''
     FIXME:
     AVLTree is currently not a subclass of BST.
@@ -21,6 +21,7 @@ class AVLTree():
         FIXME:
         Implement this function.
         '''
+        super().__init__(xs)
 
     def balance_factor(self):
         '''
@@ -49,7 +50,18 @@ class AVLTree():
         FIXME:
         Implement this function.
         '''
+        if node is None:
+            return True
 
+        balance_factor = AVLTree._balance_factor(node)
+
+        if balance_factor not in [-1,0,1]:
+            return False
+
+        left_subtree_satisfied = AVLTree._is_avl_satisfied(node.left)
+        right_subtree_satisfied = AVLTree._is_avl_satisfied(node.right)
+
+        return left_subtree_satisfied and right_subtree_satisfied
     @staticmethod
     def _left_rotate(node):
         '''
