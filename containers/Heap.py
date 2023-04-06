@@ -173,6 +173,6 @@ class Heap(BinaryTree):
                 node.value, node.right.value = node.right.value, node.value
                 Heap._trickle(node.right)
         if node.left:
-                if node.value > node.left.value:
-                    node.value, node.left.value = node.left.value, node.value
-                    Heap._trickle(node.left)
+            if node.value > node.left.value:
+                node.value, node.left.value = node.left.value, node.value
+                Heap._trickle(node.left)
